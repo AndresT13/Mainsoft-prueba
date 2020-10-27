@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS}  %t %level %c %msg %n"/>
+        </Console>
+        <File fileName="Log.log" name="FileLogin">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS}  %level %msg %n"/>
+        </File>
+        <File fileName="logsRESTmainsoft/customer/Log.log" name="FileCustomer">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS}  %level %msg %n"/>
+        </File>
+        <File fileName="logsRESTmainsoft/product/Log.log" name="FileProduct">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS}  %level %msg %n"/>
+        </File>
+        <File fileName="logsRESTmainsoft/sale/Log.log" name="FileSale">
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} %level %msg %n"/>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Root level="debug">
+            <AppenderRef ref="Console"/>
+            <AppenderRef ref="FileLogin"/>
+            <AppenderRef ref="FileCustomer"/>
+            <AppenderRef ref="FileProduct"/>
+            <AppenderRef ref="FileSale"/>
+        </Root>
+    </Loggers>
+</Configuration>
