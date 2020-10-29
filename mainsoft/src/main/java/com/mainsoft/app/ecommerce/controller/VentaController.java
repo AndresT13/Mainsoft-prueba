@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.mainsoft.app.ecommerce.entity.DetalleVenta;
 import com.mainsoft.app.ecommerce.entity.Venta;
-import com.mainsoft.app.ecommerce.servicesImpl.VentaServiceImpl;
+import com.mainsoft.app.ecommerce.services.IVentaService;
 
 import io.reactivex.Observable;
 
@@ -24,11 +24,12 @@ import io.reactivex.Observable;
 public class VentaController {
 
 	@Autowired
-	private VentaServiceImpl ventaService;
+	private IVentaService ventaService;
 
+	@SuppressWarnings("unchecked")
 	@GetMapping(value = "/ventas")
 	public List<Venta> list() {
-		return ventaService.FindAll();
+		return (List<Venta>) ventaService.FindAll();
 
 	}
 

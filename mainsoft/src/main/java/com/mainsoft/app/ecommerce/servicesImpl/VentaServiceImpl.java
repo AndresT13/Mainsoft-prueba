@@ -22,9 +22,10 @@ public class VentaServiceImpl implements IVentaService {
 	@Autowired
 	private IVentaDao ventaDao;
 
+	@SuppressWarnings("unchecked")
 	@Override
-	public List<Venta> FindAll() {
-		return ventaDao.findAll();
+	public ResponseEntity<List<Venta>> FindAll() {
+		return (ResponseEntity<List<Venta>>) ventaDao.findAll();
 	}
 
 	@Override

@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.mainsoft.app.ecommerce.entity.Producto;
-import com.mainsoft.app.ecommerce.servicesImpl.ProductoServiceImpl;
+import com.mainsoft.app.ecommerce.services.IProductoService;
 
 @RestController
 @RequestMapping("/api")
@@ -26,7 +26,7 @@ import com.mainsoft.app.ecommerce.servicesImpl.ProductoServiceImpl;
 public class ProductoController {
 
 	@Autowired
-	private ProductoServiceImpl ProductoService;
+	private IProductoService ProductoService;
 
 	@GetMapping("/productos")
 	public List<Producto> list() {

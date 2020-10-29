@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.mainsoft.app.ecommerce.entity.Cliente;
-import com.mainsoft.app.ecommerce.servicesImpl.ClienteServiceImpl;
+import com.mainsoft.app.ecommerce.services.IClienteService;
 
 @RestController
 @Validated
@@ -22,7 +22,7 @@ import com.mainsoft.app.ecommerce.servicesImpl.ClienteServiceImpl;
 public class ClienteController {
 
 	@Autowired
-	private ClienteServiceImpl clienteService;
+	private IClienteService clienteService;
 
 	@GetMapping("/clientes")
 	public List<Cliente> list() {
@@ -33,7 +33,7 @@ public class ClienteController {
 	@Valid
 	public ResponseEntity<?> Crear(@Valid @RequestBody Cliente cliente) {
 		return clienteService.create(cliente);
-		
+
 	}
 
 }

@@ -1,6 +1,6 @@
 package com.mainsoft.app.ecommerce.configurationJWT;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.mainsoft.app.ecommerce.servicesImpl.UserService;
+import com.mainsoft.app.ecommerce.services.User;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
