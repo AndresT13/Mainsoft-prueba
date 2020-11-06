@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -19,14 +18,13 @@ import com.mainsoft.app.ecommerce.services.IVentaService;
 import io.reactivex.Observable;
 
 @RestController
-@CrossOrigin(origins = "*")
 @RequestMapping("/api")
 public class VentaController {
 
 	@Autowired
 	private IVentaService ventaService;
 
-	@SuppressWarnings("unchecked")
+	
 	@GetMapping(value = "/ventas")
 	public List<Venta> list() {
 		return (List<Venta>) ventaService.FindAll();

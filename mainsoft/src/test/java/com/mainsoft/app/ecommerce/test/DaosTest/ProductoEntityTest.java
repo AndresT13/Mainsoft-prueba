@@ -28,7 +28,7 @@ class ProductoEntityTest {
 		Producto productoTest = new Producto();
 		productoTest.setIdProducto(11L);
 		productoTest.setNombre("Harley Davinson Fat bot");
-		productoTest.setPrecio(50000000);
+		productoTest.setPrecio("50000000");
 
 		ResponseEntity<Producto> productoEntity = productoService.create(productoTest);
 		System.out.println(productoEntity.getStatusCodeValue());

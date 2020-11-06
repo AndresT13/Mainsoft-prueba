@@ -17,15 +17,15 @@ public class Producto implements Serializable {
 	private Long idProducto;
 
 	private String nombre;
-
-	private float precio;
+	// precio pasa como un token por que pasa como un objeto JSON para que en el front se convierta a toDouble 
+	private String precio;
 
 	public Producto() {
 		super();
 	}
 
-	public Producto(Long idProducto, String nombre, float precio) {
-		super();
+	public Producto(Long idProducto, String nombre, String precio) {
+		this();
 		this.idProducto = idProducto;
 		this.nombre = nombre;
 		this.precio = precio;
@@ -47,11 +47,11 @@ public class Producto implements Serializable {
 		this.nombre = nombre;
 	}
 
-	public float getPrecio() {
+	public String getPrecio() {
 		return precio;
 	}
 
-	public void setPrecio(float precio) {
+	public void setPrecio(String precio) {
 		this.precio = precio;
 	}
 

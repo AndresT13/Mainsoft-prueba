@@ -71,5 +71,4 @@ public class UsuarioService implements UserDetailsService {
 		return autorizacion;
 	}
 
-
 }

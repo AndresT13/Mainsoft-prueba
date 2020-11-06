@@ -11,7 +11,7 @@ import io.reactivex.Observable;
 
 public interface IVentaService {
 
-	public ResponseEntity<List<Venta>> FindAll();
+	public List<Venta> FindAll();
 
 	public Venta findById(Long id);
 
